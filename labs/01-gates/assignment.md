@@ -9,11 +9,11 @@
 2. Listing of VHDL architecture from design file (`design.vhd`) for all three functions. Always use syntax highlighting, meaningful comments, and follow VHDL guidelines:
 
 ```vhdl
-architecture dataflow of demorgan is
+architecture dataflow of gates is
 begin
-    f_o      <= -- WRITE YOUR CODE HERE
-    f_nand_o <= -- WRITE YOUR CODE HERE
-    f_nor_o  <= -- WRITE YOUR CODE HERE
+    f_o      <= (not b_i and a_i) or (not c_i and not b_i);
+    fnand_o  <= '0';
+    fnor_o   <= '1';
 end architecture dataflow;
 ```
 
