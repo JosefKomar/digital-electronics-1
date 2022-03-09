@@ -57,7 +57,15 @@ begin
         s_hex <= "0100"; wait for 50 ns;
         assert (s_seg = "1001100")
         report "Input combination 0100 (4) FAILED" severity error;
+
+	s_hex <= "1001"; wait for 50 ns;
+        assert (s_seg = "0000100")
+        report "Input combination 1001 (9) FAILED" severity error;
         
+	s_hex <= "1010"; wait for 50 ns;
+        assert (s_seg = "0001000")
+        report "Input combination 1010 (A) FAILED" severity error;
+	
         s_hex <= "1100"; wait for 50 ns;
         assert (s_seg = "0110001")
         report "Input combination 1100 (C) FAILED" severity error;
